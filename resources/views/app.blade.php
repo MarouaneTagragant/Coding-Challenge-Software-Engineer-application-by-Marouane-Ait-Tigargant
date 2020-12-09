@@ -20,8 +20,10 @@
             <div class="container">
                 <div class="row">
                     <nav class="navbar navbar-expand-lg col-12 bg-primary my-3">
+                        <router-link class="nav-item nav-link text-white" to="/">Product</router-link>
+                        <router-link class="nav-item nav-link text-white" to="/category">Category</router-link>
                     </nav>
-                    test
+                    <router-view></router-view>
                 </div>
             </div>
         </div>
