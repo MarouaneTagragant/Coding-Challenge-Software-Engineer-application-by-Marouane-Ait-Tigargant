@@ -85,6 +85,7 @@
                 form: {
                     name: '',
                     description: '',
+                    photo : [],
                     category_id: []
                 },
                 alert: {

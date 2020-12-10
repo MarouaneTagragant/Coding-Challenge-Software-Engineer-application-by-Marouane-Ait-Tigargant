@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -16,6 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        
         return Product::with('categories')->get();
     }
 
@@ -119,8 +119,10 @@ class ProductController extends Controller
     public function productImage($image)
     {
         $product_image_name = 'product_'.time().'.'.$image->extension();
+    
         $image->storeAs('products',$product_image_name);
 
-        return Storage::url($product_image_name);
+        return '/storage/products/'.$product_image_name;
     }
 }
+
