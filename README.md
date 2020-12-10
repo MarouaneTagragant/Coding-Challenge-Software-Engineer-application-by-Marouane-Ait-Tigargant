@@ -45,6 +45,7 @@ to use CLI commande for Delete or ADD (Product/Category)
     $ php artisan command:AddProduct ProductName ProductDescription price category_id path_img
     $ php artisan command:deleteProduct id_Product
     $ php artisan command:AddCategory CategoryName ParentCategoty_id/Optionelle
+    $ php artisan command:deleteCategory id_Category
 ```
 
 License
