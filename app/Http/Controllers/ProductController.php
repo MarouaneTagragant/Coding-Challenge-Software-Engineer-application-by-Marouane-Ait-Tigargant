@@ -118,11 +118,16 @@ class ProductController extends Controller
      */
     public function productImage($image)
     {
-        $product_image_name = 'product_'.time().'.'.$image->extension();
+        // $product_image_name = 'product_'.time().'.'.$image->extension();
     
-        $image->storeAs('products',$product_image_name);
+        // $image->storeAs('products',$product_image_name);
 
-        return '/storage/products/'.$product_image_name;
+        // return '/storage/products/'.$product_image_name;
+
+        $path = $image->store('products');
+
+        return 'storage/'.$path;
+        
     }
 }
 
